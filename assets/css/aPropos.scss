@@ -1,0 +1,10 @@
+@use "_variables" as *;
+h2 {
+  color: #8a2be2; // Ton violet
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: $font-crea;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-left: 15px;
+}

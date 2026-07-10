@@ -1,0 +1,62 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center; /* Centre les cartes à l'intérieur du bloc */
+  align-items: center;
+  gap: 8px;
+  padding: 40px 20px;
+
+  /* --- LES CORRECTIONS POUR CENTRER LE BLOC --- */
+  width: 100%;            /* Prend toute la largeur disponible pour mieux respirer */
+  max-width: 1000px;      /* Empêche le bloc de devenir trop immense sur écran géant */
+  margin: 0 auto;         /* LA MAGIE : Centre automatiquement le bloc .cards dans la page */
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.15s;
+}
+
+.card::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+                  960px circle at 0 0,
+                  rgb(218, 36, 224),
+                  transparent 40%
+  );
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.card-content {
+  background-color: #3c2757;
+  border-radius: inherit;
+  transition: all 0.25s;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+}
+
+.card:hover {
+  transform: scale(0.98);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+

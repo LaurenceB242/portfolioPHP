@@ -1,0 +1,60 @@
+@use "_variables" as *;
+#presentation{
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  background-color: #131016;
+  .conteneur {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+    gap: 2.5rem;
+    flex-direction: row-reverse;
+    .pres-right {
+      text-align: left;
+      align-self: flex-start;
+      margin-top: 2rem;
+      h1 {
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+      }
+      h2 {
+        color: #8a2be2; // Ton violet
+        font-size: 3rem;
+        font-family: $font-crea;
+        font-weight: 400;
+      }
+    }
+    }
+
+    // NEWS
+    .pres-center {
+      width: 25%;
+      text-align: center;
+
+      h2 {
+        font-size: 1.4rem;
+        color: #ffffff;
+      }
+    }
+
+    // 3. TON PORTRAIT (Qui se retrouve maintenant à GAUCHE)
+    .pres-left {
+      width: 30%;
+      display: flex;
+      justify-content: flex-start;
+
+      img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+    }
+  }
+

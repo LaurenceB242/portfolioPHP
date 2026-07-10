@@ -1,0 +1,77 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  max-width: 650px; // Donne la forme allongée visible sur ton image
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.custom-card {
+  background-color: #38303a; // La teinte exacte violet/gris foncé de ton image
+  border-radius: 35px;       // Coins très arrondis
+  padding: 30px 30px 20px 30px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px); // Petit effet de lévitation au survol
+  }
+}
+
+.card-content {
+  font-family: 'Kalam', cursive; // Ta superbe police !
+  font-weight: 300;              // Ta version Light
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end; // Aligne les boutons tout à droite
+  gap: 18px;                 // Espace entre le cœur et la flèche
+  margin-top: 15px;
+}
+
+.btn-action {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// Style initial des icônes basé sur ton image
+.btn-like {
+  svg {
+    stroke: #ffffff;
+    transition: fill 0.3s ease, filter 0.3s ease;
+  }
+
+  // Animation quand l'utilisateur clique (effet "retiré")
+  &.unliked svg {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+  }
+}
+
+.btn-share {
+  svg {
+    stroke: #ffffff;
+  }
+}

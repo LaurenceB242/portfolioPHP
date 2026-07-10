@@ -1,0 +1,77 @@
+.sidebar-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  .nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column; // Aligné verticalement sur PC
+    gap: 2.5rem;      // Espace entre tes icônes
+    padding: 0;
+    margin: 0;
+  }
+  .nav-link {
+    color: #ffffff;   // Couleur de base des icônes (Blanc)
+    font-size: 1.8rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; // Base ronde pour l'effet goutte
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover, &.active {
+      color: #8a2be2; // Le logo reste blanc sur le fond violet
+    }
+  }
+  @media (max-width: 768px) {
+    top: auto;
+    bottom: 20px;       // Décolle la barre du bas pour faire une bulle flottante
+    left: 50%;
+    transform: translateX(-50%); // Centre parfaitement la barre horizontalement
+    width: calc(100% - 40px);    // Laisse une petite marge sur les côtés de l'écran
+    max-width: 450px;   // Évite qu'elle soit trop géante
+    height: 70px;       // Hauteur fixe sur mobile
+    border-radius: 35px; // Arrondit complètement les bords de la barre (style pilule)
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); // Ombre portée pour l'effet flottant
+
+    .nav-list {
+      flex-direction: row; // Aligne les icônes horizontalement !
+      justify-content: space-around; // Répartit les icônes équitablement
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .nav-link {
+      font-size: 1.5rem; // Icônes un poil plus petites sur mobile
+      width: 45px;
+      height: 45px;
+
+      &.active {
+        background-color: #8a2be2;
+        transform: translateY(-15px); // Effet Gouttelette : l'icône active remonte vers le haut !
+        box-shadow: 0 8px 20px rgb(251 251 251 / 0.4); // Petite lueur violette
+
+        // Optionnel : change la forme en goutte d'eau (haut pointu, bas rond)
+        border-radius: 50% 50% 50% 50%;
+      }
+    }
+  }
+}
+
+// IMPORTANT : On gère les marges du contenu principal selon l'écran
+main {
+  margin-left: 80px; // Décale à gauche sur PC
+  @media (max-width: 768px) {
+    margin-left: 0;      // Plus de décalage à gauche sur mobile
+    margin-bottom: 100px; // Décale vers le bas pour ne pas cacher le texte sous la nav
+  }
+}

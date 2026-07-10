@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Kalam';
+  src: url('./fonts/Kalam-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Version REGULAR (400)
+@font-face {
+  font-family: 'Kalam';
+  src: url('./fonts/Kalam-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Version BOLD (700)
+@font-face {
+  font-family: 'Kalam';
+  src: url('./fonts/Kalam-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kalam';
+  src: url('./fonts/Kalam-Light.woff2') format('woff2');
+  font-weight: 300; // 300 c'est la valeur standard pour "Light"
+  font-style: normal;
+  font-display: swap;
+}
+$font-crea: 'Kalam', cursive;

@@ -1,0 +1,10 @@
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;           // Derrière ton contenu (main) mais devant le fond noir absolu
+  pointer-events: none; // Laisse passer les clics à travers
+  background-color: #131016; // Ton fond sombre
+}
